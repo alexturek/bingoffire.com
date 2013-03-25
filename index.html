@@ -1,34 +1,86 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Bing Of Fire</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
 	</head>
+	<style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+    </style>
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
 	<body>
-		<center>
-		<div class="row">
-			<h1>Bing Of Fire</h1>
+		<div class="container-narrow">
+			<div class="masthead">
+				<ul class="nav nav-pills pull-center">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li class="active"><a href="mailto:bingoffire@gmail.com">Contact</a></li>
+					<!-- <li><a href="http://www.facebook.com/pages/Bing-of-Fire/502888773079831">Facebook</a></li> -->
+				</ul>
+			</div>
+
+			<div class="jumbotron">
+				<h1>Bing Of Fire</h1>
+				<p class="lead">A food cart serving jian bing in Seattle</p>
+				<img src="img/jianbing.jpg" width="300"/>
+				<p class="lead">Coming soon!</p>
+			</div>
+
+			<div class="span12">
+				<h4>Where's this cart going to be?</h4>
+				<p>I'm planning on starting in South Lake Union, near Amazon and UW medical campus. But I'm also...</p>
+				<h4>Looking for locations</h4>
+				<p>I'm currently looking for companies/retailers who would like to go into a unofficial (and free!) partnership with Bing of Fire.  Basically, food cart owners are required by King County to have signed permission and access to a restroom during our operating hours (usually 10am-2pm.)  <a href="mailto:bingoffire@gmail.com">Contact me here</a> for more information.</p>
+			</div>
+
+			<div class="span12">
+				<center>
+					<h4>What is jian bing?</h4>
+					<p><iframe width="420" height="315" src="http://www.youtube.com/embed/dIh0_88kyYs" frameborder="0" allowfullscreen></iframe></p>
+				</center>
+			</div>
+			
 		</div>
-
-		<div class="row">
-			<p><img src="img/jianbing.jpg" class="img-circle"/></p>
-		</div>
-
-		<div class="row">
-			<p/>A food cart serving jian bing in Seattle
-			<p>Coming soon!</p>
-			<p>(<a href="http://www.facebook.com/pages/Bing-of-Fire/502888773079831">Facebook</a>)</p>
-		</div>
-
-		<h2>Where's this cart going to be?</h2>
-		<p>I'm planning on starting in South Lake Union, near Amazon and UW medical campus</p>
-		<h2>What is jian bing?</h2>
-		<p><iframe width="420" height="315" src="http://www.youtube.com/embed/dIh0_88kyYs" frameborder="0" allowfullscreen></iframe></p>
-
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		</center>
+
 	</body>
 </html>
