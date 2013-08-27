@@ -1,0 +1,29 @@
+body {
+    font-family: 'Molengo', sans-serif;
+    font-size: 18px;
+    background-color: #ad2320;
+    color: #f8d464;
+}
+h1 {
+    /*font-family: 'Kaushan Script', cursive;*/
+    font-weight: bold;
+    color: #ffffff;
+}
+h3 {
+    color: #ffffff;
+}
+a {
+    font-weight: bold;
+    color: #ffffff;
+}
+.contentcolumn {
+    background-color: #ad5350;
+}
+.navbar .nav > li > a {
+    font-family: 'Molengo', sans-serif;
+    color: #0;
+}
+.navbar .nav > .active > a, .navbar .nav > .active {
+    font-family: 'Molengo', sans-serif;
+    color: #0;
+}
