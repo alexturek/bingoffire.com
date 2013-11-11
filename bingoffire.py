@@ -33,6 +33,12 @@ def write_access_log(response):
     return response
 
 
+@app.after_request
+def set_caching(response):
+    response.headers['Cache-Control'] = 'public, max-age=3600'
+    return response
+
+
 @app.route('/')
 def index():
     return _send_file('', 'index.html')
@@ -80,4 +86,4 @@ def favicon():
 
 def _send_file(directory, filename, **options):
     directory = app.root_path + '/static' + directory
-    return flask.send_from_directory(directory, filename, **options)
+    return flask.send_from_directory(directory, filename, cache_timeout = 60 * 60)
