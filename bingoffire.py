@@ -13,16 +13,11 @@ LOG_FORMAT = Formatter(
     '%(asctime)s [%(levelname)s] : %(message)s'
 )
 
-log_to_file = RotatingFileHandler('app', maxBytes=LOG_SIZE)
-log_to_file.setLevel(logging.INFO)
-log_to_file.setFormatter(LOG_FORMAT)
-
 log_to_stdout = logging.StreamHandler(sys.stdout)
 log_to_stdout.setLevel(logging.DEBUG)
 log_to_stdout.setFormatter(LOG_FORMAT) 
 
 app = flask.Flask(__name__)
-app.logger.addHandler(log_to_file)
 app.logger.addHandler(log_to_stdout)
 
 
