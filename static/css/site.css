@@ -5,7 +5,6 @@ body {
     color: #f8d464;
 }
 h1 {
-    /*font-family: 'Kaushan Script', cursive;*/
     font-weight: bold;
     color: #ffffff;
 }
@@ -16,14 +15,69 @@ a {
     font-weight: bold;
     color: #ffffff;
 }
-.contentcolumn {
-    background-color: #ad5350;
+.content-column {
+    background-color: #a33;
 }
-.navbar .nav > li > a {
-    font-family: 'Molengo', sans-serif;
-    color: #0;
+.content-chunk {
+    clear: all;
 }
-.navbar .nav > .active > a, .navbar .nav > .active {
-    font-family: 'Molengo', sans-serif;
-    color: #0;
+
+/* Change the twit feed */
+.tweets * {
+    /*border: 1px solid white;*/
+}
+
+.tweets .tweet {
+    display: block;
+    float: left;
+    width: 70%;
+    padding: 0.5em;
+    text-align: left;
+}
+
+.tweets {
+    text-align: center;
+}
+
+.tweets .tweet a {
+    color: #dd6;
+}
+
+.tweets li {
+    list-style-type: none;
+    border: solid orange 2px;
+    border-radius: 10px;
+    margin: 10px 0px;
+    padding: 0.5em;
+    background-color: #A00;
+    clear: right;
+    display: block;
+    float: left;
+    max-width: 500px;
+}
+
+.tweets .user span span {
+    display: none;
+}
+
+.tweets .user {
+    border-bottom: 2px solid yellow;
+    text-align: left;
+}
+
+.tweets .interact a {
+    margin: -2px 0px;
+    float: right;
+    font-size: 0.8em;
+    display: block;
+    clear: right;
+}
+
+.tweets .timePosted {
+    display: block;
+    float: right;
+    width: 18%;
+    clear: right;
+    font-size: 0.6em;
+    text-align: right;
 }
