@@ -1,7 +1,7 @@
 body {
     font-family: 'Molengo', sans-serif;
     font-size: 18px;
-    background-color: #ad2320;
+    background-color: #400;
     color: #f8d464;
 }
 h1 {
@@ -16,15 +16,33 @@ a {
     color: #ffffff;
 }
 .content-column {
-    background-color: #a33;
+    max-width: 800px;
+    margin: 0 0 50px 0;
 }
 .content-chunk {
     clear: all;
+    padding: 10px;
+}
+
+.content-chunk img {
+    margin: 0 0 50px 0;
 }
 
 /* Change the twit feed */
-.tweets * {
-    /*border: 1px solid white;*/
+.tweets {
+    text-align: center;
+}
+
+.tweets li {
+    list-style-type: none;
+    border: solid orange 2px;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 0.5em;
+    background-color: #A00;
+    clear: all;
+    display: inline-block;
+    max-width: 500px;
 }
 
 .tweets .tweet {
@@ -35,25 +53,8 @@ a {
     text-align: left;
 }
 
-.tweets {
-    text-align: center;
-}
-
 .tweets .tweet a {
     color: #dd6;
-}
-
-.tweets li {
-    list-style-type: none;
-    border: solid orange 2px;
-    border-radius: 10px;
-    margin: 10px 0px;
-    padding: 0.5em;
-    background-color: #A00;
-    clear: right;
-    display: block;
-    float: left;
-    max-width: 500px;
 }
 
 .tweets .user span span {
@@ -80,4 +81,8 @@ a {
     clear: right;
     font-size: 0.6em;
     text-align: right;
+}
+
+.contact-list li {
+    list-style-type: none;
 }

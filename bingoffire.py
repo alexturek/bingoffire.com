@@ -36,9 +36,9 @@ def index():
     return _send_file('', 'index.html', cache_timeout=(5*60))
 
 
-@app.route('/catering')
+@app.route('/contact')
 def catering():
-    return _send_file('', 'catering.html', cache_timeout=(5*60))
+    return _send_file('', 'contact.html', cache_timeout=(5*60))
 
 
 @app.route('/gallery')
