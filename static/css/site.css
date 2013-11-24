@@ -45,6 +45,10 @@ a {
     max-width: 500px;
 }
 
+.content-chunk .tweets img {
+    margin: 0;
+}
+
 .tweets .tweet {
     display: block;
     float: left;
