@@ -47,6 +47,11 @@ def gallery():
     return _send_file('', 'gallery.html', cache_timeout=(5*60))
 
 
+@app.route('/about')
+def about():
+    return _send_file('', 'about.html', cache_timeout=(5*60))
+
+
 @app.route('/js/<path:filename>')
 def deliver_js(filename):
     flask.g.is_static = True
