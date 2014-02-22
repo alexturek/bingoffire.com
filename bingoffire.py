@@ -39,7 +39,7 @@ def index():
     return _send_file('', 'index.html', cache_timeout=_PAGE_CACHE)
 
 
-paths_to_page = {
+page_to_file = {
     'contact': 'contact.html',
     'gallery': 'gallery.html',
     'about': 'about.html',
@@ -49,11 +49,11 @@ paths_to_page = {
 
 
 @app.route('/<path:page>')
-def html_pages():
-    if path in paths_to_page:
-        return _send_file('', paths_to_page[page], cache_timeout=_PAGE_CACHE)
+def html_pages(page):
+    if page in page_to_file:
+        return _send_file('', page_to_file[page], cache_timeout=_PAGE_CACHE)
     else:
-        return flask.redirect(url_for('index'))
+        return flask.redirect(flask.url_for('index'))
 
 
 @app.route('/js/<path:filename>')
