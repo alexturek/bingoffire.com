@@ -25,7 +25,7 @@ _ASSET_CACHE = 5 * 60 * 60
 
 def main():
     port = int(os.environ.get('PORT', 4000))
-    app.run(host="0.0.0.0", port=port, debug=True, use_reloader=True)
+    app.run(host="0.0.0.0", port=port, debug=False, use_reloader=True)
 
 
 @app.after_request
@@ -53,7 +53,7 @@ def html_pages():
     if path in paths_to_page:
         return _send_file('', paths_to_page[page], cache_timeout=_PAGE_CACHE)
     else:
-        return _send_file('', '404.html', cache_timeout=_PAGE_CACHE)
+        return flask.redirect(url_for('index'))
 
 
 @app.route('/js/<path:filename>')
