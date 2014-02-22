@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Bing Of Fire</title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/bootstrap-responsive.css" rel="stylesheet"/>
+
+        <!-- My css -->
+        <link href='css/site.css' rel="stylesheet" />
+
+        <!-- Fonts -->
+        <!-- <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'/> -->
+        <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'/>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                {% macro tab(text, path) -%}
+                    <li {% if page.path == path %} class="active" {% endif %}>
+                        <a href="{{path}}">{{text}}</a>
+                    </li>
+                {%- endmacro %}
+                <ul class="nav nav-tabs">
+                    {{ tab('Home', '/') }}
+                    {{ tab('Calendar', 'calendar') }}
+                    {{ tab('Menu', 'menu_en') }}
+                    {{ tab('中文', 'menu_cn') }}
+                    {{ tab('Contact', 'contact') }}
+                    {{ tab('Gallery', 'gallery') }}
+                    {{ tab('About', 'about') }}
+                </ul>
+            </div>
+            {% block body %}{% endblock %}
+        </div>
+        {% block scripts %}{% endblock %}
+    </body>
+</html>

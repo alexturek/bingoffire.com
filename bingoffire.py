@@ -34,12 +34,8 @@ def set_caching(response):
     return response
 
 
-@app.route('/')
-def index():
-    return _send_file('', 'index.html', cache_timeout=_PAGE_CACHE)
-
-
 page_to_file = {
+    '/': 'index.html',
     'contact': 'contact.html',
     'gallery': 'gallery.html',
     'about': 'about.html',
@@ -48,12 +44,13 @@ page_to_file = {
 }
 
 
+@app.route('/')
 @app.route('/<path:page>')
-def html_pages(page):
+def html_pages(page='/'):
     if page in page_to_file:
-        return _send_file('', page_to_file[page], cache_timeout=_PAGE_CACHE)
+        return flask.render_template(page_to_file[page], page={'path': page})
     else:
-        return flask.redirect(flask.url_for('index'))
+        return flask.redirect('/')
 
 
 @app.route('/js/<path:filename>')

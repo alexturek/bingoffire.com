@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="row">
+    <div class="text-center content-column">
+        <div class="content-chunk">
+            <img src="img/stamp_red_yellow.png"/>
+        </div>
+        <div class="content-chunk">
+            <h1>Seattle's only source for jianbing</h1>
+        </div>
+        <div class="content-chunk">
+            <div class="tweets" id="tweets"></div>
+        </div>
+        <div class="content-chunk">
+            <a href="https://twitter.com/BingofFire">More of the twitter</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/twitterFetcher.js"></script>
+<script src="js/main.js"></script>
+{% endblock %}
