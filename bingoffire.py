@@ -41,6 +41,7 @@ page_to_file = {
     'about': 'about.html',
     'menu_en': 'menu_en.html',
     'menu_cn': 'menu_cn.html',
+    'calendar': 'calendar.html',
 }
 
 
