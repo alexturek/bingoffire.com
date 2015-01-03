@@ -14,23 +14,6 @@
     <div class="container">
       <div class="header">
         <h1>Seattle's best jianbing</h1>
-        <div style="vertical-align: bottom">
-          <a href="http://weibo.com/seattlejianbing">
-            <img style="vertical-align: bottom" height="64" width="64" src="/static/img/weibo64.png"/>
-          </a>
-          <a href="https://twitter.com/bingoffire">
-            <img style="vertical-align: bottom" height="64" width="64" src="/static/img/twitter.png"/>
-          </a>
-          <a href="https://www.facebook.com/BingofFire">
-            <img style="vertical-align: bottom" height="64" width="64" src="/static/img/fb.png"/>
-          </a>
-          <a href="mailto:bingoffire@gmail.com">
-            <span style="font-size: 64px;" class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-          </a>
-          <a href="https://www.google.com/calendar/embed?src=6kk9goosdcge2j43j0ut0ef5b4%40group.calendar.google.com&ctz=America/Los_Angeles">
-            <span style="font-size: 64px;" class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-          </a>
-        </div>
         {% macro tab(text, path) -%}
         <span class="tab {% if page.path == path %}active{% endif %}">
           <a href="{{path}}">{{text}}</a>
@@ -40,6 +23,23 @@
         {{ tab('Menu', 'menu_en') }}
         {{ tab('中文', 'menu_cn') }}
         {{ tab('About', 'about') }}
+        <div style="vertical-align: bottom">
+          <a href="http://weibo.com/seattlejianbing">
+            <img style="vertical-align: bottom" height="32" width="32" src="/static/img/weibo64.png"/>
+          </a>
+          <a href="https://twitter.com/bingoffire">
+            <img style="vertical-align: bottom" height="32" width="32" src="/static/img/twitter.png"/>
+          </a>
+          <a href="https://www.facebook.com/BingofFire">
+            <img style="vertical-align: bottom" height="32" width="32" src="/static/img/fb.png"/>
+          </a>
+          <a href="mailto:bingoffire@gmail.com">
+            <span style="font-size: 32px;" class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+          </a>
+          <a href="https://www.google.com/calendar/embed?src=6kk9goosdcge2j43j0ut0ef5b4%40group.calendar.google.com&ctz=America/Los_Angeles">
+            <span style="font-size: 32px;" class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+          </a>
+        </div>
       </div>
       {% block body %}{% endblock %}
     </div>
