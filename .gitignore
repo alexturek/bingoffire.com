@@ -2,3 +2,4 @@
 venv
 access*
 app*
+.DS_Store
