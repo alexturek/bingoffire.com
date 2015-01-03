@@ -19,8 +19,8 @@ log_to_stdout.setFormatter(LOG_FORMAT)
 app = flask.Flask(__name__)
 app.logger.addHandler(log_to_stdout)
 
-_PAGE_CACHE = 10
-_ASSET_CACHE = 5 * 60 * 60
+_PAGE_CACHE = 10 * 60 # 10 minutes
+_ASSET_CACHE = 5 * 60 * 60 # 5 hours
 
 
 def main():
@@ -37,11 +37,9 @@ def set_caching(response):
 page_to_file = {
     '/': 'index.html',
     'contact': 'contact.html',
-    'gallery': 'gallery.html',
     'about': 'about.html',
     'menu_en': 'menu_en.html',
     'menu_cn': 'menu_cn.html',
-    'calendar': 'calendar.html',
 }
 
 
